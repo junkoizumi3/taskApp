@@ -33,11 +33,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
 
     //検索ボタンを押すと検索
+    //空欄で検索するとフィルター解除
     @IBAction func button(_ sender:Any){
         if categorySearch.text != "" {
         view.endEditing(true)
         taskArray = realm.objects(Task.self).filter("category == %@",categorySearch.text!)
         tableView.reloadData()
+        }else{
+            taskArray = realm.objects(Task.self).filter("TRUEPREDICATE")
+            tableView.reloadData()
         }
     }
     
