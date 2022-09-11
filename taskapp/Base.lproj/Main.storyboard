@@ -53,17 +53,37 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uqk-iA-X2G">
-                                <rect key="frame" x="10" y="135" width="304" height="34"/>
+                                <rect key="frame" x="10" y="135" width="394" height="35"/>
                                 <color key="backgroundColor" systemColor="systemGray5Color"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJ0-RD-Czw">
-                                <rect key="frame" x="324" y="138" width="80" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="検索"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mJ0-RD-Czw">
+                                <rect key="frame" x="283" y="180" width="31" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="検索"/>
+                                    </attributedString>
+                                </state>
                                 <connections>
                                     <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aq8-oX-B3x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ofk-ZG-gwv">
+                                <rect key="frame" x="349" y="180" width="45" height="32"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="クリア">
+                                            <attributes>
+                                                <font key="NSFont" size="15" name="HiraginoSans-W3"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="FilterClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jlO-2q-Rjd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -71,23 +91,27 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Lh-17-a7k" secondAttribute="trailing" id="0ae-9e-Sv2"/>
+                            <constraint firstItem="mJ0-RD-Czw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="283" id="0ij-Vw-h2Z"/>
                             <constraint firstItem="0Lh-17-a7k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="1pH-OH-k82"/>
-                            <constraint firstItem="mJ0-RD-Czw" firstAttribute="leading" secondItem="uqk-iA-X2G" secondAttribute="trailing" constant="10" id="31X-mQ-98u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ofk-ZG-gwv" secondAttribute="trailing" constant="20" id="7Tq-EL-A9Y"/>
                             <constraint firstItem="0Lh-17-a7k" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="8xv-ta-agx"/>
+                            <constraint firstItem="mJ0-RD-Czw" firstAttribute="top" secondItem="uqk-iA-X2G" secondAttribute="bottom" constant="10" id="FTF-ZW-x2Y"/>
+                            <constraint firstItem="Ofk-ZG-gwv" firstAttribute="top" secondItem="uqk-iA-X2G" secondAttribute="bottom" constant="10" id="HEu-7q-kCp"/>
                             <constraint firstItem="uqk-iA-X2G" firstAttribute="top" secondItem="2NU-va-6xO" secondAttribute="bottom" constant="10" id="HVz-DC-lUl"/>
                             <constraint firstItem="0Lh-17-a7k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KMa-Ll-SfQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uqk-iA-X2G" secondAttribute="trailing" constant="10" id="P7x-Z3-fcl"/>
                             <constraint firstItem="2NU-va-6xO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="RpH-6S-DER"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0Lh-17-a7k" secondAttribute="bottom" id="Swo-RZ-vqz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uqk-iA-X2G" secondAttribute="trailing" constant="100" id="TlS-H7-oC1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2NU-va-6xO" secondAttribute="trailing" constant="10" id="TpM-EE-kDD"/>
+                            <constraint firstItem="0Lh-17-a7k" firstAttribute="top" secondItem="Ofk-ZG-gwv" secondAttribute="bottom" constant="26" id="XjM-Cj-o0D"/>
                             <constraint firstItem="uqk-iA-X2G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="YLX-Rs-DX8"/>
-                            <constraint firstItem="mJ0-RD-Czw" firstAttribute="top" secondItem="2NU-va-6xO" secondAttribute="bottom" constant="13" id="fxx-zn-Ptc"/>
                             <constraint firstItem="0Lh-17-a7k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fzA-I4-1bB"/>
                             <constraint firstItem="0Lh-17-a7k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="j4v-d6-WuI"/>
                             <constraint firstItem="0Lh-17-a7k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nU3-Ul-u8x"/>
                             <constraint firstItem="2NU-va-6xO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="p1h-4F-iYr"/>
+                            <constraint firstItem="Ofk-ZG-gwv" firstAttribute="leading" secondItem="mJ0-RD-Czw" secondAttribute="trailing" constant="35" id="rJs-RV-X7z"/>
                             <constraint firstItem="0Lh-17-a7k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tCs-Hb-fLn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mJ0-RD-Czw" secondAttribute="trailing" constant="10" id="zcJ-2L-M0s"/>
+                            <constraint firstItem="0Lh-17-a7k" firstAttribute="top" secondItem="mJ0-RD-Czw" secondAttribute="bottom" constant="28" id="yRQ-co-nkg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g3S-ZN-CKD">

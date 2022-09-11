@@ -34,10 +34,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     //検索ボタンを押すと検索
     @IBAction func button(_ sender:Any){
+        if categorySearch.text != "" {
         view.endEditing(true)
         taskArray = realm.objects(Task.self).filter("category == %@",categorySearch.text!)
         tableView.reloadData()
+        }
     }
+    
+    //クリアボタンを押すと絞り込みクリア
+    @IBAction func FilterClear(_ sender:Any){
+        taskArray = realm.objects(Task.self).filter("TRUEPREDICATE")
+        categorySearch.text = ""
+        tableView.reloadData()
+    }
+    
     // segue で画面遷移する時に呼ばれる
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let inputViewController:InputViewController = segue.destination as! InputViewController
